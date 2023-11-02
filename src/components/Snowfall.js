@@ -1,6 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+const Snowfall = ({ count }) => {
+  return (
+    <SnowfallContainer>
+      {[...Array(count)].map((_, i) => (
+        <Snowflake key={i} />
+      ))}
+    </SnowfallContainer>
+  );
+};
+
 const SnowfallContainer = styled.div`
   position: fixed;
   top: 0;
@@ -25,22 +35,14 @@ const Snowflake = styled.div`
 
   @keyframes fall {
     0% {
+      opacity: 1;
       transform: translateY(-10px);
     }
     100% {
+      opaticy: 0;
       transform: translateY(110vh);
     }
   }
 `;
-
-const Snowfall = ({ count }) => {
-  return (
-    <SnowfallContainer>
-      {[...Array(count)].map((_, i) => (
-        <Snowflake key={i} />
-      ))}
-    </SnowfallContainer>
-  );
-};
 
 export default Snowfall;

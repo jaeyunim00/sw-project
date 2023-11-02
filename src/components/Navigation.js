@@ -2,25 +2,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { GiPolarBear } from "react-icons/gi";
 
-const NavContainer = styled.div`
-  // background-color: black;
-  position: absolute;
-  width: 100%;
-`;
-
-const NavSubContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-`;
-
-const LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: ;
-`;
-
 function Navigation() {
   return (
     <NavContainer>
@@ -54,5 +35,24 @@ function Navigation() {
     </NavContainer>
   );
 }
+
+const NavContainer = styled.div`
+  // background-color: black;
+  position: absolute;
+  width: 100%;
+`;
+
+const NavSubContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+`;
+
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: ;
+`;
 
 export default Navigation;

@@ -20,13 +20,14 @@ const IceWeight = ({ data /* see data tab */ }) => (
       reverse: false,
     }}
     yFormat=" >-.2f"
+    curve="cardinal"
     axisTop={null}
     axisRight={null}
     axisBottom={{
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: "transportation",
+      legend: "년도",
       legendOffset: 36,
       legendPosition: "middle",
     }}
@@ -34,15 +35,19 @@ const IceWeight = ({ data /* see data tab */ }) => (
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: "count",
-      legendOffset: -40,
+      legend: "",
+      legendOffset: -50,
       legendPosition: "middle",
     }}
-    pointSize={10}
+    colors={{ scheme: "category10" }}
+    lineWidth={4}
+    pointSize={0}
     pointColor={{ theme: "background" }}
     pointBorderWidth={2}
     pointBorderColor={{ from: "serieColor" }}
-    pointLabelYOffset={-12}
+    pointLabelYOffset={-14}
+    enableArea={true}
+    areaOpacity={0.9}
     useMesh={true}
     legends={[
       {
